@@ -1,4 +1,4 @@
-# Base64 Encoder/Decoder
+# BASE-X | Effortless encoding - Seamless decoding.
 
 This is a simple web application built using Flask that allows users to upload any file and get its Base64 encoded string. It also provides the functionality to decode a Base64 string back into a file.
 
