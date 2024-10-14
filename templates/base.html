@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <script>
+        function copyToClipboard() {
+            const textarea = document.getElementById('encodedText');
+            textarea.select();
+            document.execCommand('copy');
+            // Show a temporary alert to indicate success
+            const copyButton = document.getElementById('copyButton');
+            copyButton.innerHTML = 'Copied!';
+            setTimeout(() => {
+                copyButton.innerHTML = 'Copy';
+            }, 2000); // Reset button text after 2 seconds
+        }
+    </script>
+
+</head>
+
+<body class="font-ubuntu bg-neutral-100">
+    {% block content %} {% endblock %}
+</body>
+
+</html>
