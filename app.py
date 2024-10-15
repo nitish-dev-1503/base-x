@@ -6,8 +6,8 @@ import os
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
-# File size limit: 10 MB (10 * 1024 * 1024 bytes)
-MAX_FILE_SIZE = 10 * 1024 * 1024  # 10MB
+# File size limit: 4 MB (10 * 1024 * 1024 bytes)
+MAX_FILE_SIZE = 4 * 1024 * 1024  # 4MB
 app.config['MAX_CONTENT_LENGTH'] = MAX_FILE_SIZE  # Enforce max file size at Flask level
 
 @app.route('/')
