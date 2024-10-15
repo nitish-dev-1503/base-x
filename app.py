@@ -6,8 +6,8 @@ import os
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
-# File size limit: 4 MB (10 * 1024 * 1024 bytes)
-MAX_FILE_SIZE = 4 * 1024 * 1024  # 4MB
+# File size limit: 4.5 MB (4.5 * 1024 * 1024 bytes)
+MAX_FILE_SIZE = 4.5 * 1024 * 1024  # 4.5MB
 app.config['MAX_CONTENT_LENGTH'] = MAX_FILE_SIZE  # Enforce max file size at Flask level
 
 @app.route('/')
@@ -35,9 +35,9 @@ def encode_file():
     if file:
         file_data = file.read()
 
-        # Check if the file size exceeds the 10MB limit
+        # Check if the file size exceeds the 4.5MB limit
         if len(file_data) > MAX_FILE_SIZE:
-            flash('File exceeds the 10MB size limit', 'encode')
+            flash('File exceeds the 4.5MB size limit', 'encode')
             return redirect(url_for('index'))
 
         # Encode the file data to Base64
